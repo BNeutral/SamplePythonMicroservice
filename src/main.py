@@ -112,6 +112,7 @@ def user_transaction_list(uuid: int, operation : Optional[Operation] = None, cur
     '''    
     db_connection = db_get_connection()
 
+    #TODO: Fix this security risk by expanding the code properly and using the '?' syntax
     op = "" if operation is None else f"AND operation = {operation.value} "
     cur = "" if currency is None else f"AND currency = {currency.value} "  
     entries = db_connection.execute(f'SELECT timestamp,operation,currency,amount FROM transactions\
