@@ -12,13 +12,9 @@ Install virtual environments for python if you don't have them set up (venv)
 
 ## Windows
 
-In a powershell run the following once (this createas/nukes the database, would need a lot more security in a production env obviously)
+In a powershell run the following
 
-> initdatabase.ps1
-
-Then run
-
-> run.ps1
+> ./run_debug.ps1
 
 Server should be up and listening, ip/port will be shown in the console.
 
@@ -58,6 +54,6 @@ If you add packages, you should run
 
 > pip freeze > requirements.txt
 
-So people can install the libraries with
+So people can install the libraries with the following (will need to update scripts)
 
 > pip install -r requirements.txt
